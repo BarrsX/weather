@@ -2,7 +2,6 @@ import requests
 import json
 from tkinter import *
 import datetime
-from PIL import ImageTk, Image
 
 # necessary details
 root = Tk()

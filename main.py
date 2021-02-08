@@ -1,3 +1,5 @@
+import math
+
 import requests
 import json
 from tkinter import *
@@ -42,15 +44,15 @@ def city_name():
     # Temps
     current_temperature = y["temp"]
     current_temperature = (current_temperature * 9 / 5) + 32
-    current_temperature = round(current_temperature, 2)
+    current_temperature = math.floor(current_temperature)
 
     tempmin = y['temp_min']
     tempmin = (tempmin * 9 / 5) + 32
-    tempmin = round(tempmin, 2)
+    tempmin = math.floor(tempmin)
 
     tempmax = y['temp_max']
     tempmax = (tempmax * 9 / 5) + 32
-    tempmax = round(tempmax, 2)
+    tempmax = math.floor(tempmax)
 
     # Humidity
     current_humidity = y["humidity"]
